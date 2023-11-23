@@ -1,0 +1,7 @@
+The USA Computing Olympiad fosters pre-college computing through training, contests, and international competitions.
+
+Specific goals of the USACO include:
+ - Train USA team to win multiple gold medals at the next IOI.
+ - Engage USA students in learning and growing to achieve the first goal
+ - Conduct an eight day USA Olympiad for the best 15 USA students in order to identify   
+   the final four USA representatives for international competition.
