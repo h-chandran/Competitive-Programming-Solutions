@@ -1,5 +1,4 @@
 /*
-ID: harishc4
 TASK: friday
 LANG: C++                 
 */
