@@ -1,1 +1,3 @@
-Codeforces Problem Solutions - Rating 900
+**Codeforces Problem Solutions**
+<br />
+**Rating:** 900
