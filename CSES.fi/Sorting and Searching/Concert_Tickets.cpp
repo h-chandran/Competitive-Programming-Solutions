@@ -2,57 +2,36 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
+#include <set>
 using namespace std;
 #define ll long long
+multiset<ll> ms;
 
-vector<ll> h;
-vector<bool> del;
-ll binary(ll m){
-    ll low = 0;
-    ll high = h.size() - 1;
-    ll ind = -1;
-    ll mid = high / 2;
-    
-    while(low <= high){
-        if(m >= h[mid] && mid < h.size() && mid >= 0){
-            ind = max(mid,ind);
-            low = mid+1;
-            mid = (low + high) / 2;
-        } else{
-            high = mid - 1;
-            mid = (low + high) / 2;
-        }
+ll search(ll c){
+    set<ll>::iterator it = ms.upper_bound(c);
+    if(it == ms.begin()){
+        return -1;
     }
-    
-    ll ans = -1;
-    ind++;
-    do{
-        ind--;
 
-        if(ind != -1 && ind < h.size() && !del[ind]){
-            ans = h[ind];
-            del[ind] = true; 
-            break;
-        }
-        
-    } while(del[ind] && h[ind] >= 0);
-    
+    ll ans = *--it;
+    ms.erase(ms.find(ans));
     return ans;
 }
 
 int main(){
+    
     int n, m; cin >> n >> m;
     for(int i = 0; i < n; i++){
-        int c; cin >> c;
-        h.push_back(c);
-        del.push_back(false);
+        ll c; cin >> c;
+        ms.insert(c);
     } 
-    sort(h.begin(), h.end());
     for(int i = 0; i < m; i++){
-        int t; cin >> t;
-        cout << binary(t) << endl;
-
+        ll c; cin >> c;
+        cout << search(c) << endl;
         
+        
+
     }
+
     
 }
