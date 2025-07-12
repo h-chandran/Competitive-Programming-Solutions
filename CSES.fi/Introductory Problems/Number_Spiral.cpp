@@ -11,14 +11,14 @@ ll solve(){
     ll row = max(y,x);
     if(row % 2 == 0){
         if(y >= x){
-            return pow(row,2) - x + 1;
+            return (row * row - x + 1);
         } 
-        return pow(row,2) - x + 1 - (row - y);
+        return row * row - x + 1 - (row - y);
     } else{
         if(x >= y){
-            return pow(row,2) - y + 1;
+            return row * row - y + 1;
         } else{
-            return pow(row,2) - y + 1 - (row - x);
+            return row * row - y + 1 - (row - x);
         }
     }
 }
@@ -28,4 +28,5 @@ int main(){
     while(t--){
         cout << solve() << endl;
     }
+
 }
