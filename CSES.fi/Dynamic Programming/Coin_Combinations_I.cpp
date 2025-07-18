@@ -36,6 +36,7 @@ int main(){
         ll c; cin >> c; coins.push_back(c);
     }
     cout << ways(x);
+    
 
 
 }
